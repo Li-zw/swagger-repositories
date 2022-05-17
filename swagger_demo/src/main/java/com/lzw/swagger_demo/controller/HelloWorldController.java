@@ -32,8 +32,8 @@ public class HelloWorldController {
      */
     @ApiOperation("查询")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "name", value = "姓名", required = true, paramType = "query", dataType = "String"),
-            @ApiImplicitParam(name = "age", value = "年龄", required = true, paramType = "query", dataType = "Integer")
+            @ApiImplicitParam(name = "name", value = "姓名", required = true, paramType = "query", dataTypeClass = String.class),
+            @ApiImplicitParam(name = "age", value = "年龄", required = true, paramType = "query", dataTypeClass = Integer.class)
     })
     @PostMapping("query")
     public String query(String name, int age) {
